@@ -5,3 +5,4 @@ The idea: 3D Dead Cells like game.
 
 ## Setup
 Ensure [Git LFS](https://git-lfs.com/) is installed and setup.
+Using Godot version 4.6 stable.
