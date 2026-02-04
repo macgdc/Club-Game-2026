@@ -1,14 +1,40 @@
 [gd_scene format=3 uid="uid://bgwes7enjnddk"]
 
-[ext_resource type="Script" uid="uid://ci66s8045ed5j" path="res://Scripts/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://ctj18kog68fh7" path="res://Scripts/game_manager.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://ce18ptj0xbaa6" path="res://Scripts/world_3d.gd" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://cy0ckawlllhn4" path="res://Scripts/gui.gd" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dn6c0861b6g6k" path="res://Scenes/start_screen.tscn" id="4_jjvhh"]
 
-[node name="Main" type="Node" unique_id=1700619128]
+[node name="Game Manager" type="Node" unique_id=1700619128]
 script = ExtResource("1_jjgbg")
 
 [node name="World3D" type="Node3D" parent="." unique_id=528927865]
+script = ExtResource("2_8gbba")
+
+[node name="Map" type="Node3D" parent="World3D" unique_id=1784401170]
+
+[node name="Player" type="CharacterBody3D" parent="World3D" unique_id=1737139889]
 
 [node name="GUI" type="Control" parent="." unique_id=1027028566]
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_bo1nx")
+
+[node name="StartScreen" parent="GUI" unique_id=1152627540 instance=ExtResource("4_jjvhh")]
+layout_mode = 1
+
+[node name="PlayerOverlay" type="Control" parent="GUI" unique_id=106555198]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseScreen" type="Control" parent="GUI" unique_id=172743388]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

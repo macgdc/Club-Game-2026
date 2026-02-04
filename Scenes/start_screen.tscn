@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dn6c0861b6g6k"]
+
+[ext_resource type="Script" uid="uid://dw6xqkforim15" path="res://Scripts/start_screen.gd" id="1_i8r30"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_i826k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i826k"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.38359722, 0.38359728, 0.38359714, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8r30"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ainjc"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.2123048, 0.21230489, 0.21230471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_60ddj"]
+Button/font_sizes/font_size = 32
+Button/styles/hover = SubResource("StyleBoxFlat_i826k")
+Button/styles/normal = SubResource("StyleBoxFlat_i8r30")
+Button/styles/pressed = SubResource("StyleBoxFlat_ainjc")
+
+[node name="StartScreen" type="Control" unique_id=1152627540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i8r30")
+
+[node name="Background" type="TextureRect" parent="." unique_id=978215168]
+modulate = Color(0.10747976, 0.10747973, 0.10747973, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_i826k")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1506668712]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 794.0
+offset_bottom = 1079.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1695685111]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=735449038]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1241603796]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 100
+text = "Club Game"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=629461504]
+layout_mode = 2
+theme_override_constants/margin_top = 210
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1537037174]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Play" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=335267208]
+layout_mode = 2
+theme = SubResource("Theme_60ddj")
+text = "Play"
+alignment = 0
+
+[node name="Options" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=737581571]
+layout_mode = 2
+theme = SubResource("Theme_60ddj")
+text = "Options"
+alignment = 0
+
+[node name="Credit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1698265195]
+layout_mode = 2
+theme = SubResource("Theme_60ddj")
+text = "Credit"
+alignment = 0
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1503187900]
+layout_mode = 2
+theme = SubResource("Theme_60ddj")
+text = "Quit"
+alignment = 0
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
