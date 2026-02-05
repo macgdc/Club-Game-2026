@@ -1,9 +1,11 @@
 extends Control
 
+signal play_pressed
 
 func _on_play_pressed():
 	# Replace with opening a scene with all the save states
 	print("Open save states scene")
+	play_pressed.emit()
 
 
 func _on_options_pressed():
