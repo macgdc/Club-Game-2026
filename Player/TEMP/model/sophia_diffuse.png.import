@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5l8ustuhywfg"
-path="res://.godot/imported/MacGDC_Icon.png-dd0ee7f0821bf960ad82c5ee8f9401ad.ctex"
+uid="uid://6jb7dt4d54ck"
+path="res://.godot/imported/sophia_diffuse.png-a6288fe81eae304a36874b7e545d462d.ctex"
 metadata={
 "vram_texture": false
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/MacGDC_Icon.png"
-dest_files=["res://.godot/imported/MacGDC_Icon.png-dd0ee7f0821bf960ad82c5ee8f9401ad.ctex"]
+source_file="res://Player/TEMP/model/sophia_diffuse.png"
+dest_files=["res://.godot/imported/sophia_diffuse.png-a6288fe81eae304a36874b7e545d462d.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +24,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +38,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

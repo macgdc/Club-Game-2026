@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dn6c0861b6g6k"]
 
-[ext_resource type="Script" uid="uid://dw6xqkforim15" path="res://Scripts/start_screen.gd" id="1_i8r30"]
+[ext_resource type="Script" uid="uid://dw6xqkforim15" path="res://GUI/StartMenu/start_screen.gd" id="1_i8r30"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i826k"]
 

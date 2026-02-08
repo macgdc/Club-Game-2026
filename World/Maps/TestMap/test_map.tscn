@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cjnsgynubn4i6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qvhan"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_eunhr"]
+sky_material = SubResource("ProceduralSkyMaterial_qvhan")
+
+[sub_resource type="Environment" id="Environment_k3v36"]
+background_mode = 2
+sky = SubResource("Sky_eunhr")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Map" type="Node3D" unique_id=881175120]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=414712941]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1514511929]
+environment = SubResource("Environment_k3v36")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1631248633]
+transform = Transform3D(30.314583, 0, 0, 0, 27.768976, 0, 0, 0, 30.314583, 0, -15.396524, 0)
+use_collision = true
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=187228729]
+transform = Transform3D(3.92, 0, 0, 0, 3.92, 0, 0, 0, 3.92, 6.1582537, -2, 0)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 1, 1, 1, 0)
