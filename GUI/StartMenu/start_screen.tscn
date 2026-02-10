@@ -4,7 +4,7 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i826k"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i826k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ua716"]
 content_margin_left = 30.0
 content_margin_top = 10.0
 content_margin_bottom = 10.0
@@ -14,7 +14,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8r30"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5wmn"]
 content_margin_left = 30.0
 content_margin_top = 10.0
 content_margin_bottom = 10.0
@@ -23,7 +23,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ainjc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bosmc"]
 content_margin_left = 30.0
 content_margin_top = 10.0
 content_margin_bottom = 10.0
@@ -35,9 +35,9 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="Theme" id="Theme_60ddj"]
 Button/font_sizes/font_size = 32
-Button/styles/hover = SubResource("StyleBoxFlat_i826k")
-Button/styles/normal = SubResource("StyleBoxFlat_i8r30")
-Button/styles/pressed = SubResource("StyleBoxFlat_ainjc")
+Button/styles/hover = SubResource("StyleBoxFlat_ua716")
+Button/styles/normal = SubResource("StyleBoxFlat_r5wmn")
+Button/styles/pressed = SubResource("StyleBoxFlat_bosmc")
 
 [node name="StartScreen" type="Control" unique_id=1152627540]
 layout_mode = 3
