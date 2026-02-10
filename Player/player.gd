@@ -21,10 +21,10 @@ var _last_movement_direction : Vector3 = Vector3.BACK
 var _gravity : float = -30.0
 
 # This is more temp, GUI components will handle this
-func _input(event : InputEvent) -> void:
-	# ui_cancel = Escape key currently
-	if event.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+#func _input(event : InputEvent) -> void:
+	## ui_cancel = Escape key currently
+	#if event.is_action_pressed("ui_cancel"):
+		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _unhandled_input(event: InputEvent) -> void:

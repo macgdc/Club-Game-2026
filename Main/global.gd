@@ -23,6 +23,6 @@ func SetPauseSubtree(root: Node, pause: bool) -> void:
 		if child is AnimationPlayer:
 			if pause:
 				child.pause()
-			else:
+			elif child.current_animation != "":
 				child.play()  # or resume, depending on your setup
 		SetPauseSubtree(child, pause)

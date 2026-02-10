@@ -1,0 +1,234 @@
+[gd_scene format=3 uid="uid://dovsal8tdm68o"]
+
+[ext_resource type="Theme" uid="uid://bpbdo5cl315xv" path="res://GUI/PauseMenu/pause_menu.tres" id="1_2mjep"]
+[ext_resource type="Script" uid="uid://b3donhmfqwqyq" path="res://GUI/PauseMenu/pause_menu.gd" id="2_mqpij"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_85f06"]
+
+[sub_resource type="Theme" id="Theme_85f06"]
+Label/font_sizes/font_size = 24
+Label/styles/normal = null
+
+[node name="PauseMenu" type="Control" unique_id=1261376996]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2mjep")
+script = ExtResource("2_mqpij")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1077212960]
+modulate = Color(0.0627451, 0.14901961, 0.2784314, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_85f06")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1375166353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=307585416]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Equipment" type="Label" parent="MarginContainer/VBoxContainer" unique_id=476246648]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "Equipment"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=74108765]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Primary" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2126996833]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item Info" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Primary" unique_id=1575144473]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Primary/Item Info" unique_id=1722921527]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Primary/Item Info/MarginContainer" unique_id=1280336527]
+layout_mode = 2
+text = "Rusty Sword I"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Primary/Item Info" unique_id=815666761]
+layout_mode = 2
+text = "138 DPS"
+
+[node name="Secondary" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1822045469]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item Info" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Secondary" unique_id=1560696132]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Secondary/Item Info" unique_id=331140937]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Secondary/Item Info/MarginContainer" unique_id=727953919]
+layout_mode = 2
+text = "Rusty Sword I"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Secondary/Item Info" unique_id=700287303]
+layout_mode = 2
+text = "138 DPS"
+
+[node name="Accessory" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=444246052]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item Info" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Accessory" unique_id=549478107]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Accessory/Item Info" unique_id=146696470]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Accessory/Item Info/MarginContainer" unique_id=1181409796]
+layout_mode = 2
+text = "Rusty Sword I"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Accessory/Item Info" unique_id=1195576948]
+layout_mode = 2
+text = "138 DPS"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1169691309]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Primary" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1008837764]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item Info" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Primary" unique_id=1002290922]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Primary/Item Info" unique_id=1401696363]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Primary/Item Info/MarginContainer" unique_id=1014292522]
+layout_mode = 2
+text = "Rusty Sword I"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Primary/Item Info" unique_id=1097490694]
+layout_mode = 2
+text = "138 DPS"
+
+[node name="Secondary" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=219241902]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item Info" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Secondary" unique_id=1427545522]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Secondary/Item Info" unique_id=180383822]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Secondary/Item Info/MarginContainer" unique_id=294184209]
+layout_mode = 2
+text = "Rusty Sword I"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Secondary/Item Info" unique_id=2124711774]
+layout_mode = 2
+text = "138 DPS"
+
+[node name="Accessory" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=42216696]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Item Info" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Accessory" unique_id=1062562826]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/Accessory/Item Info" unique_id=650605625]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Accessory/Item Info/MarginContainer" unique_id=1159531228]
+layout_mode = 2
+text = "Rusty Sword I"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/Accessory/Item Info" unique_id=1738645971]
+layout_mode = 2
+text = "138 DPS"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=991366313]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Scrolls" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=2088351656]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer3/Scrolls" unique_id=1974909811]
+layout_mode = 2
+theme = SubResource("Theme_85f06")
+
+[node name="Brutality" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3/Scrolls/HBoxContainer" unique_id=1730401480]
+modulate = Color(0.9372549, 0.41960785, 0.41960785, 1)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "1"
+
+[node name="Tactics" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3/Scrolls/HBoxContainer" unique_id=200821194]
+modulate = Color(0.7137255, 0.5176471, 0.95686275, 1)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "1"
+
+[node name="Survival" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3/Scrolls/HBoxContainer" unique_id=1804655173]
+modulate = Color(0.20784314, 0.92941177, 0.52156866, 1)
+layout_mode = 2
+size_flags_horizontal = 6
+text = "1"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=912276257]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=174076040]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Options"
+
+[node name="Restart" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=56814479]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Restart"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1376134567]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quit
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Quit" to="." method="_on_quit_pressed"]
