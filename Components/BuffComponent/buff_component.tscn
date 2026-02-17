@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b4o1lbs05btwq"]
+
+[ext_resource type="Script" uid="uid://p4e3xounamqw" path="res://Components/BuffComponent/buff_component.gd" id="1_sw1f3"]
+
+[node name="BuffComponent" type="Node3D" unique_id=1724703616]
+script = ExtResource("1_sw1f3")
