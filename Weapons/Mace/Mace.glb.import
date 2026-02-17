@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dumqfyh7u76ek"
-path="res://.godot/imported/Mace.glb-f222a9dabba343dbab9423fd62221682.scn"
+path="res://.godot/imported/Mace.glb-19c86773aacf01e5eb853285d43fe60f.scn"
 
 [deps]
 
-source_file="res://Weapons/Models/Mace.glb"
-dest_files=["res://.godot/imported/Mace.glb-f222a9dabba343dbab9423fd62221682.scn"]
+source_file="res://Weapons/Mace/Mace.glb"
+dest_files=["res://.godot/imported/Mace.glb-19c86773aacf01e5eb853285d43fe60f.scn"]
 
 [params]
 

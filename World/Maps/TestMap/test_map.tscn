@@ -1,8 +1,5 @@
 [gd_scene format=3 uid="uid://cjnsgynubn4i6"]
 
-[ext_resource type="PackedScene" uid="uid://dugsj4om0hgag" path="res://Weapons/Models/Mace.blend" id="1_d4ou5"]
-[ext_resource type="PackedScene" uid="uid://bbl0plbfwhvkt" path="res://Weapons/Models/Bad_Gun.blend" id="2_xpk8j"]
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qvhan"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -33,9 +30,3 @@ use_collision = true
 transform = Transform3D(3.92, 0, 0, 0, 3.92, 0, 0, 0, 3.92, 6.1582537, -2, 0)
 use_collision = true
 polygon = PackedVector2Array(0, 0, 1, 1, 1, 0)
-
-[node name="Mace" parent="." unique_id=364909763 instance=ExtResource("1_d4ou5")]
-transform = Transform3D(0.99999183, 0, 0, 0, 0.99999183, 0, 0, 0, 0.99999183, -6.280325, -1.3644292, -1.6615999)
-
-[node name="Bad_Gun" parent="." unique_id=1418396498 instance=ExtResource("2_xpk8j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.818925, -0.91308707, -1.786912)
