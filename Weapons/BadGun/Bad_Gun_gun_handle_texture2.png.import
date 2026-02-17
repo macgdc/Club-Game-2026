@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jqmioafhddd0"
-path.s3tc="res://.godot/imported/Bad_Gun_gun_handle_texture2.png-e4365c112740bbd05eaaa7ab5f244722.s3tc.ctex"
+path.s3tc="res://.godot/imported/Bad_Gun_gun_handle_texture2.png-b82c83d7aeed80b5f3f966d06113cbb4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Weapons/Models/Bad_Gun_gun_handle_texture2.png"
-dest_files=["res://.godot/imported/Bad_Gun_gun_handle_texture2.png-e4365c112740bbd05eaaa7ab5f244722.s3tc.ctex"]
+source_file="res://Weapons/BadGun/Bad_Gun_gun_handle_texture2.png"
+dest_files=["res://.godot/imported/Bad_Gun_gun_handle_texture2.png-b82c83d7aeed80b5f3f966d06113cbb4.s3tc.ctex"]
 
 [params]
 

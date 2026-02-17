@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cjitr8yflicjg"
-path="res://.godot/imported/coatrack.glb-a959aef9fb21504b2798932f6d3ee4f3.scn"
+uid="uid://bjhtoajbvffxr"
+path="res://.godot/imported/Bad_Gun.glb-342c03a678ab076b8bea972c593d9144.scn"
 
 [deps]
 
-source_file="res://Weapons/Models/coatrack.glb"
-dest_files=["res://.godot/imported/coatrack.glb-a959aef9fb21504b2798932f6d3ee4f3.scn"]
+source_file="res://Weapons/BadGun/Bad_Gun.glb"
+dest_files=["res://.godot/imported/Bad_Gun.glb-342c03a678ab076b8bea972c593d9144.scn"]
 
 [params]
 
