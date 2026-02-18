@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 class_name BuffsComponent
 
 @export var dict: Dictionary[String, Buff]

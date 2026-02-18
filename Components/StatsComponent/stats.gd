@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 class_name Stats
 # Dead Cells specific stats https://deadcells.wiki.gg/wiki/Stats
 # These effect both damage and health

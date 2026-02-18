@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://c40ixgq7adnn0" path="res://Components/BuffsComponent/buff.gd" id="5_fhl08"]
 [ext_resource type="PackedScene" uid="uid://b4o1lbs05btwq" path="res://Components/BuffsComponent/buffs_component.tscn" id="5_k53q1"]
 [ext_resource type="PackedScene" uid="uid://bg7hp7of3be8h" path="res://Components/StatsComponent/stats_component.tscn" id="6_fhl08"]
+[ext_resource type="PackedScene" uid="uid://gnv53i6moht0" path="res://Components/StateMachine/state_machine.tscn" id="7_od3ui"]
+[ext_resource type="Script" uid="uid://cprstmdj8bci" path="res://Player/States/player_idle.gd" id="8_00tjw"]
+[ext_resource type="Script" uid="uid://2p2yfi6mstw0" path="res://Player/States/player_move.gd" id="9_00tjw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 radius = 0.2607422
@@ -20,7 +23,7 @@ metadata/_custom_type_script = "uid://c40ixgq7adnn0"
 script = ExtResource("5_fhl08")
 metadata/_custom_type_script = "uid://c40ixgq7adnn0"
 
-[node name="Player" type="CharacterBody3D" unique_id=169490035]
+[node name="Player" type="CharacterBody3D" unique_id=169490035 groups=["Player"]]
 script = ExtResource("1_4ntmi")
 
 [node name="SophiaSkin" parent="." unique_id=1322268260 instance=ExtResource("1_4flbx")]
@@ -53,3 +56,15 @@ dict = Dictionary[String, ExtResource("5_fhl08")]({
 
 [node name="StatsComponent" parent="." unique_id=1622807289 node_paths=PackedStringArray("health_component") instance=ExtResource("6_fhl08")]
 health_component = NodePath("../HealthComponent")
+
+[node name="StateMachine" parent="." unique_id=1777195957 node_paths=PackedStringArray("initial_state", "actor") instance=ExtResource("7_od3ui")]
+initial_state = NodePath("Idle")
+actor = NodePath("..")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1320958072]
+script = ExtResource("8_00tjw")
+metadata/_custom_type_script = "uid://cprstmdj8bci"
+
+[node name="Move" type="Node" parent="StateMachine" unique_id=2144111328]
+script = ExtResource("9_00tjw")
+metadata/_custom_type_script = "uid://2p2yfi6mstw0"
