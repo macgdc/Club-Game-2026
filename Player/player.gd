@@ -80,27 +80,6 @@ func _physics_process(delta: float) -> void:
 		skin.fall()
 	
 	# The state machine handles the rest!
-	#
-	#move_and_slide()
-	#
-	#
-	## ========== Animation Stuff ===========
-	#if move_direction.length_squared() > 0.1:
-		#_last_movement_direction = move_direction
-	## Vector3.BACK is the forward dir in game world
-	#var target_angle : float = Vector3.BACK.signed_angle_to(_last_movement_direction, Vector3.UP)
-	#skin.global_rotation.y = lerp_angle(skin.rotation.y, target_angle, rotation_speed * delta)
-	#
-	#if is_starting_jump:
-		#skin.jump()
-	#elif not is_on_floor() and velocity.y < 0: # in air and falling
-		#skin.fall()
-	#elif is_on_floor():
-		#var ground_speed : float = velocity.length_squared()
-		#if ground_speed > 0.0:
-			#skin.move()
-		#else:
-			#skin.idle()
 
 
 func _on_speed_buff_changed(new_multiplier: float) -> void:
