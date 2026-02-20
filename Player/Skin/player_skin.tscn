@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://kx5qwn7cbmku"]
+
+[ext_resource type="PackedScene" uid="uid://dl821r06t2a27" path="res://Player/Skin/Model/test_character.glb" id="1_s6et7"]
+[ext_resource type="Script" uid="uid://27ebdorlecmd" path="res://Player/Skin/player_skin.gd" id="2_5guii"]
+[ext_resource type="AnimationLibrary" uid="uid://qeliytciokav" path="res://Player/Skin/Model/character_move_anims.glb" id="3_lc8nr"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_86l05"]
+animation = &"character_move_anims/idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2kp2e"]
+animation = &"character_move_anims/walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2kp2e"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0iu8s"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_r473o"]
+xfade_time = 0.2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5guii"]
+states/End/position = Vector2(445.44003, 272)
+states/idle/node = SubResource("AnimationNodeAnimation_86l05")
+states/idle/position = Vector2(445.23203, 100.064)
+states/move/node = SubResource("AnimationNodeAnimation_2kp2e")
+states/move/position = Vector2(838.6, 98.90228)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_2kp2e"), "idle", "move", SubResource("AnimationNodeStateMachineTransition_0iu8s"), "move", "idle", SubResource("AnimationNodeStateMachineTransition_r473o")]
+graph_offset = Vector2(134, -34.143806)
+
+[node name="PlayerSkin" unique_id=475535802 instance=ExtResource("1_s6et7")]
+script = ExtResource("2_5guii")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="idle" parent_id_path=PackedInt32Array(1365297160) index="1" unique_id=1679995394]
+root_node = NodePath("../..")
+libraries/character_move_anims = ExtResource("3_lc8nr")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="1" unique_id=1491182490]
+unique_name_in_owner = true
+root_node = NodePath("%AnimationTree/..")
+tree_root = SubResource("AnimationNodeStateMachine_5guii")
+anim_player = NodePath("../idle/AnimationPlayer")

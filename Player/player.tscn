@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dx11m6k388pmh"]
 
-[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://Player/TEMP/sophia_skin.tscn" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://Player/Skin/Sophia/sophia_skin.tscn" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b1q8wp8u0bd4s" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://kx5qwn7cbmku" path="res://Player/Skin/player_skin.tscn" id="3_x3vf3"]
 [ext_resource type="PackedScene" uid="uid://0r2j8vpjq5ci" path="res://Components/HealthComponent/health_component.tscn" id="4_gwnis"]
 [ext_resource type="Script" uid="uid://c40ixgq7adnn0" path="res://Components/BuffsComponent/buff.gd" id="5_fhl08"]
 [ext_resource type="PackedScene" uid="uid://b4o1lbs05btwq" path="res://Components/BuffsComponent/buffs_component.tscn" id="5_k53q1"]
@@ -28,6 +29,10 @@ script = ExtResource("1_4ntmi")
 
 [node name="SophiaSkin" parent="." unique_id=1322268260 instance=ExtResource("1_4flbx")]
 unique_name_in_owner = true
+visible = false
+
+[node name="PlayerSkin" parent="." unique_id=32244812 instance=ExtResource("3_x3vf3")]
+unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1300248057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -35,7 +40,7 @@ shape = SubResource("CapsuleShape3D_onrkg")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=1520950285]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.8236415, -0.56711084, 0, 0.56711084, 0.8236415, 0, 1.1327909, 0)
+transform = Transform3D(1, 0, 0, 0, 0.8236415, -0.56711084, 0, 0.56711084, 0.8236415, 0, 1.6954167, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=803433517]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)

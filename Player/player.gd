@@ -13,7 +13,7 @@ extends CharacterBody3D
 @onready var buffs : BuffsComponent = %BuffsComponent
 @onready var camera_pivot : Node3D = %CameraPivot
 @onready var camera : Camera3D = %Camera3D
-@onready var skin : SophiaSkin = %SophiaSkin
+@onready var skin = %PlayerSkin
 
 # Current values
 var move_speed: float
@@ -75,9 +75,10 @@ func _physics_process(delta: float) -> void:
 	is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
 	if is_starting_jump:
 		velocity.y += jump_strength
-		skin.jump()
+		#skin.jump()
 	elif not is_on_floor() and velocity.y < 0: # in air and falling
-		skin.fall()
+		pass
+		#skin.fall()
 	
 	# The state machine handles the rest!
 

@@ -2,32 +2,32 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctfbobgg7ts8d"
-path.s3tc="res://.godot/imported/eyes_diffuse_map.png-4d57070fd0c7b18d1b9a14fbe471888e.s3tc.ctex"
+uid="uid://c36m8cv33f0yi"
+path="res://.godot/imported/sophia_mouth_smile_normal.png-2cbf6cc328154be93f20755fc13d76f3.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Player/TEMP/model/textures/eyes_diffuse_map.png"
-dest_files=["res://.godot/imported/eyes_diffuse_map.png-4d57070fd0c7b18d1b9a14fbe471888e.s3tc.ctex"]
+source_file="res://Player/Skin/Sophia/model/sophia_mouth_smile_normal.png"
+dest_files=["res://.godot/imported/sophia_mouth_smile_normal.png-2cbf6cc328154be93f20755fc13d76f3.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://sophia/model/sophia_mouth_smile_normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

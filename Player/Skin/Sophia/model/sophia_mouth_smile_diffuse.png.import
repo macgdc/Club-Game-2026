@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxqmgxq6o21yr"
-path="res://.godot/imported/SSS.png-c8e4b5fe8cccd78b471a45e88557a2d8.ctex"
+uid="uid://d3gigd8y5hjg"
+path="res://.godot/imported/sophia_mouth_smile_diffuse.png-eb64ecf2c1b4ae20481c87a4de911e0d.ctex"
 metadata={
 "vram_texture": false
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Player/TEMP/model/SSS.png"
-dest_files=["res://.godot/imported/SSS.png-c8e4b5fe8cccd78b471a45e88557a2d8.ctex"]
+source_file="res://Player/Skin/Sophia/model/sophia_mouth_smile_diffuse.png"
+dest_files=["res://.godot/imported/sophia_mouth_smile_diffuse.png-eb64ecf2c1b4ae20481c87a4de911e0d.ctex"]
 
 [params]
 

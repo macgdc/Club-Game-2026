@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6jb7dt4d54ck"
-path="res://.godot/imported/sophia_diffuse.png-a6288fe81eae304a36874b7e545d462d.ctex"
+uid="uid://ctfbobgg7ts8d"
+path.s3tc="res://.godot/imported/eyes_diffuse_map.png-6b3a4d27f9befc201a53e159fa8f141e.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://Player/TEMP/model/sophia_diffuse.png"
-dest_files=["res://.godot/imported/sophia_diffuse.png-a6288fe81eae304a36874b7e545d462d.ctex"]
+source_file="res://Player/Skin/Sophia/model/textures/eyes_diffuse_map.png"
+dest_files=["res://.godot/imported/eyes_diffuse_map.png-6b3a4d27f9befc201a53e159fa8f141e.s3tc.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

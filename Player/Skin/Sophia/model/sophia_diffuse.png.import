@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbg3uqtvqxigv"
-path="res://.godot/imported/sophia_roughness.png-7e48f1e8e71056c563e9d131114f33c8.ctex"
+uid="uid://6jb7dt4d54ck"
+path="res://.godot/imported/sophia_diffuse.png-4b598d802f49fd25187554a56cb51719.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,8 +11,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Player/TEMP/model/sophia_roughness.png"
-dest_files=["res://.godot/imported/sophia_roughness.png-7e48f1e8e71056c563e9d131114f33c8.ctex"]
+source_file="res://Player/Skin/Sophia/model/sophia_diffuse.png"
+dest_files=["res://.godot/imported/sophia_diffuse.png-4b598d802f49fd25187554a56cb51719.ctex"]
 
 [params]
 
