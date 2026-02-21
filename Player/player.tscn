@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dx11m6k388pmh"]
 
-[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://Player/Skin/Sophia/sophia_skin.tscn" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b1q8wp8u0bd4s" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://kx5qwn7cbmku" path="res://Player/Skin/player_skin.tscn" id="3_x3vf3"]
 [ext_resource type="PackedScene" uid="uid://0r2j8vpjq5ci" path="res://Components/HealthComponent/health_component.tscn" id="4_gwnis"]
@@ -26,10 +25,6 @@ metadata/_custom_type_script = "uid://c40ixgq7adnn0"
 
 [node name="Player" type="CharacterBody3D" unique_id=169490035 groups=["Player"]]
 script = ExtResource("1_4ntmi")
-
-[node name="SophiaSkin" parent="." unique_id=1322268260 instance=ExtResource("1_4flbx")]
-unique_name_in_owner = true
-visible = false
 
 [node name="PlayerSkin" parent="." unique_id=32244812 instance=ExtResource("3_x3vf3")]
 unique_name_in_owner = true

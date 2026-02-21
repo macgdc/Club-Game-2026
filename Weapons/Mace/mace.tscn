@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cyawbw5qe34pn"]
+
+[ext_resource type="Script" uid="uid://clr01fp35r27k" path="res://Weapons/Mace/mace.gd" id="1_lcebp"]
+
+[node name="Mace" type="Node3D" unique_id=1566396843]
+script = ExtResource("1_lcebp")
