@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		current_state.physics_update(delta)
 
 
-func on_change_state(new_state_name: String, ) -> void:
+func on_change_state(new_state_name: String) -> void:
 	var new_state: State = states.get(new_state_name.to_lower())
 	
 	assert(new_state, "State not found: " + new_state_name)

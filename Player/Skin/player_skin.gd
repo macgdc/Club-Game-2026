@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var anim_tree = %AnimationTree
 
+# I don't think i should use a state machine, just player
 var state_machine: AnimationNodeStateMachinePlayback
 
 func _ready() -> void:
@@ -15,3 +16,11 @@ func idle() -> void:
 
 func move() -> void:
 	state_machine.travel("move")
+
+
+func jump() -> void:
+	state_machine.travel("jump")
+
+
+func fall() -> void:
+	state_machine.travel("jump")

@@ -3,13 +3,13 @@
 importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
-uid="uid://qeliytciokav"
-path="res://.godot/imported/character_move_anims.glb-1c66fddee138175a598506f80f94bc93.res"
+uid="uid://sulyvxvauxa8"
+path="res://.godot/imported/player_base_anims.glb-df805b1a69c78615a2d2e8111152425e.res"
 
 [deps]
 
-source_file="res://Player/Skin/Model/character_move_anims.glb"
-dest_files=["res://.godot/imported/character_move_anims.glb-1c66fddee138175a598506f80f94bc93.res"]
+source_file="res://Player/Skin/Model/player_base_anims.glb"
+dest_files=["res://.godot/imported/player_base_anims.glb-df805b1a69c78615a2d2e8111152425e.res"]
 
 [params]
 
@@ -39,7 +39,7 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "animations": {
-"idle": {
+"Idle": {
 "save_to_file/enabled": false,
 "save_to_file/fallback_path": "",
 "save_to_file/keep_custom_tracks": "",
