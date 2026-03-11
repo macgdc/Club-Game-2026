@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cyawbw5qe34pn"]
+
+[ext_resource type="Script" uid="uid://bl4nc6haw5jqs" path="res://Weapons/Mace/mace.gd" id="1_lcebp"]
+[ext_resource type="Script" uid="uid://cfopfsuinqr1h" path="res://Weapons/weapon.gd" id="2_tu7xm"]
+[ext_resource type="Script" uid="uid://cehdqwagjdwxb" path="res://Weapons/Mace/mace_attack1_state.gd" id="3_53npb"]
+[ext_resource type="PackedScene" uid="uid://krgpuq8sxr4r" path="res://Weapons/Mace/mace_skin.tscn" id="3_liir8"]
+[ext_resource type="AnimationLibrary" uid="uid://c8l4gv1xuyepl" path="res://Weapons/Mace/player_anims.glb" id="4_liir8"]
+[ext_resource type="Script" uid="uid://c84fuv2bpyhc4" path="res://Weapons/Mace/mace_attack2_state.gd" id="5_sb4l6"]
+
+[sub_resource type="Resource" id="Resource_sb4l6"]
+script = ExtResource("2_tu7xm")
+name = "Mace"
+metadata/_custom_type_script = "uid://cfopfsuinqr1h"
+
+[node name="Mace" type="Node3D" unique_id=620362954 node_paths=PackedStringArray("weapon_states", "init_state")]
+script = ExtResource("1_lcebp")
+weapon = SubResource("Resource_sb4l6")
+weapon_states = [NodePath("States/Attack1"), NodePath("States/Attack2")]
+init_state = NodePath("States/Attack1")
+metadata/_custom_type_script = "uid://bwbt4nh7evkbd"
+
+[node name="Mace Skin" parent="." unique_id=334373699 instance=ExtResource("3_liir8")]
+unique_name_in_owner = true
+transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 0, 0.5576086, 0)
+visible = false
+
+[node name="States" type="Node" parent="." unique_id=1399657532]
+
+[node name="Attack1" type="Node" parent="States" unique_id=1987603556 node_paths=PackedStringArray("attack_buffer_timer")]
+script = ExtResource("3_53npb")
+attack_buffer_timer = NodePath("AttackBuffer")
+metadata/_custom_type_script = "uid://calvikhr1jug2"
+
+[node name="AttackBuffer" type="Timer" parent="States/Attack1" unique_id=2042924009]
+wait_time = 0.5
+one_shot = true
+
+[node name="Attack2" type="Node" parent="States" unique_id=1009573679 node_paths=PackedStringArray("attack_buffer_timer")]
+script = ExtResource("5_sb4l6")
+attack_buffer_timer = NodePath("AttackBuffer")
+metadata/_custom_type_script = "uid://calvikhr1jug2"
+
+[node name="AttackBuffer" type="Timer" parent="States/Attack2" unique_id=1926164299]
+wait_time = 0.2
+one_shot = true
+
+[node name="PlayerAnimator" type="AnimationPlayer" parent="." unique_id=1673730699]
+unique_name_in_owner = true
+libraries/player_anims = ExtResource("4_liir8")
+
+[connection signal="timeout" from="States/Attack1/AttackBuffer" to="States/Attack1" method="_on_attack_buffer_timeout"]
+[connection signal="timeout" from="States/Attack2/AttackBuffer" to="States/Attack2" method="_on_attack_buffer_timeout"]
+[connection signal="animation_finished" from="PlayerAnimator" to="." method="_on_player_animator_animation_finished"]

@@ -1,6 +1,6 @@
 extends Node
 
-var game_manager : GameManager
+#var game_manager : GameManager
 
 # Some universal helper methods which may come in handy
 
@@ -26,3 +26,7 @@ func SetPauseSubtree(root: Node, pause: bool) -> void:
 			elif child.current_animation != "":
 				child.play()  # or resume, depending on your setup
 		SetPauseSubtree(child, pause)
+
+
+func get_remaining_anim_time(anim_player: AnimationPlayer) -> float:
+	return anim_player.current_animation_length - anim_player.current_animation_position

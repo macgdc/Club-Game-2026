@@ -3,6 +3,11 @@ class_name State
 
 signal state_transition
 
+# state_name is whatever the node name is
+#var state_name: String:
+	#get:
+		#return name
+
 func enter(_actor: Node) -> void:
 	pass
 

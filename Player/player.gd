@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 @export_group("Camera")
 @export_range(0.0, 1.0) var mouse_sensitivity : float = 0.25
@@ -8,28 +9,34 @@ extends CharacterBody3D
 @export var base_rotation_speed: float = 10.0
 @export var base_jump_strength: float = 10.0
 @export var base_defense: float = 10.0
+@export var max_jumps: int = 2
 @export var gravity: float = -30.0
+
+#@export_group("Weapons")
+#@export var primary_weapon: Weapon
 
 @onready var buffs : BuffsComponent = %BuffsComponent
 @onready var camera_pivot : Node3D = %CameraPivot
 @onready var camera : Camera3D = %Camera3D
-@onready var skin : SophiaSkin = %SophiaSkin
+@onready var skin = %PlayerSkin
 
 # Current values
 var move_speed: float
 var rotation_speed: float
 var jump_strength: float
+var jump_count: int = 0
 
 
 var move_direction: Vector3 = Vector3.ZERO
 var last_move_direction : Vector3 = Vector3.BACK
 var camera_input_direction : Vector2 = Vector2.ZERO
-var is_starting_jump: bool = false
 
 func _ready() -> void:
 	move_speed = base_move_speed * buffs.get_multiplier("speed")
 	rotation_speed = base_rotation_speed
 	jump_strength = base_jump_strength * buffs.get_multiplier("jump")
+	
+	# Connections
 	buffs.get_buff("speed").buff_changed.connect(_on_speed_buff_changed)
 	buffs.get_buff("jump").buff_changed.connect(_on_jump_buff_changed)
 
@@ -46,6 +53,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if is_moving():
+		last_move_direction = move_direction
+	
 	# TODO: REMOVE THIS!!!!
 	if Input.is_action_just_pressed("right_click"):
 		buffs.set_multiplier("speed", 2.0)
@@ -69,17 +79,33 @@ func _physics_process(delta: float) -> void:
 	move_direction.y = 0.0 # Because camera may be looking down on player (we don't want to move player into ground)
 	move_direction = move_direction.normalized()
 	
-	# Not putting this in the states since currently it would
-	# be in all states
-	# Jump + Animation
-	is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
-	if is_starting_jump:
-		velocity.y += jump_strength
-		skin.jump()
-	elif not is_on_floor() and velocity.y < 0: # in air and falling
-		skin.fall()
+	# Calculate the move velocity in x and z
+	var y_velocity : float = velocity.y
+	velocity.y = 0.0 # Use gravity to calculate y not move_direction
+	velocity = move_direction * move_speed
 	
-	# The state machine handles the rest!
+	# Calculate the gravity velocity
+	velocity.y = y_velocity + gravity * delta
+	
+	# The state machine handles:
+	# Calling move_and_slide + Animations
+	# Any other state specific logic
+
+
+# Called in states if you need the model to rotate
+# Its state separate for cases like cutscenes were maybe
+# you don't want the player to rotate based on movement
+func rotate_skin(delta: float) -> void:
+	# Vector3.BACK is the forward dir in game world
+	var target_angle : float = Vector3.BACK.signed_angle_to(last_move_direction, Vector3.UP)
+	skin.global_rotation.y = lerp_angle(skin.rotation.y, target_angle, rotation_speed * delta)
+
+
+func is_moving() -> bool:
+	return move_direction != Vector3.ZERO
+
+func can_jump() -> bool:
+	return jump_count < max_jumps
 
 
 func _on_speed_buff_changed(new_multiplier: float) -> void:

@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dx11m6k388pmh"]
 
-[ext_resource type="PackedScene" uid="uid://prh35jb6tjtd" path="res://Player/TEMP/sophia_skin.tscn" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b1q8wp8u0bd4s" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://b0ly0qf6dq8b4" path="res://Player/Skin/player_skin.tscn" id="3_x3vf3"]
 [ext_resource type="PackedScene" uid="uid://0r2j8vpjq5ci" path="res://Components/HealthComponent/health_component.tscn" id="4_gwnis"]
 [ext_resource type="Script" uid="uid://c40ixgq7adnn0" path="res://Components/BuffsComponent/buff.gd" id="5_fhl08"]
 [ext_resource type="PackedScene" uid="uid://b4o1lbs05btwq" path="res://Components/BuffsComponent/buffs_component.tscn" id="5_k53q1"]
 [ext_resource type="PackedScene" uid="uid://bg7hp7of3be8h" path="res://Components/StatsComponent/stats_component.tscn" id="6_fhl08"]
 [ext_resource type="PackedScene" uid="uid://gnv53i6moht0" path="res://Components/StateMachine/state_machine.tscn" id="7_od3ui"]
-[ext_resource type="Script" uid="uid://cprstmdj8bci" path="res://Player/States/player_idle.gd" id="8_00tjw"]
-[ext_resource type="Script" uid="uid://2p2yfi6mstw0" path="res://Player/States/player_move.gd" id="9_00tjw"]
+[ext_resource type="Script" uid="uid://ck48kv85c2n0r" path="res://Player/States/player_ground_state.gd" id="8_od3ui"]
+[ext_resource type="Script" uid="uid://cs8143daom50r" path="res://Player/States/player_air_state.gd" id="9_00tjw"]
+[ext_resource type="PackedScene" uid="uid://cyawbw5qe34pn" path="res://Weapons/Mace/mace.tscn" id="10_apopc"]
+[ext_resource type="Script" uid="uid://cfopfsuinqr1h" path="res://Weapons/weapon.gd" id="11_5htga"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 radius = 0.2607422
@@ -23,10 +25,14 @@ metadata/_custom_type_script = "uid://c40ixgq7adnn0"
 script = ExtResource("5_fhl08")
 metadata/_custom_type_script = "uid://c40ixgq7adnn0"
 
+[sub_resource type="Resource" id="Resource_5htga"]
+script = ExtResource("11_5htga")
+metadata/_custom_type_script = "uid://cfopfsuinqr1h"
+
 [node name="Player" type="CharacterBody3D" unique_id=169490035 groups=["Player"]]
 script = ExtResource("1_4ntmi")
 
-[node name="SophiaSkin" parent="." unique_id=1322268260 instance=ExtResource("1_4flbx")]
+[node name="PlayerSkin" parent="." unique_id=526569761 instance=ExtResource("3_x3vf3")]
 unique_name_in_owner = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1300248057]
@@ -35,7 +41,7 @@ shape = SubResource("CapsuleShape3D_onrkg")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=1520950285]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.8236415, -0.56711084, 0, 0.56711084, 0.8236415, 0, 1.1327909, 0)
+transform = Transform3D(1, 0, 0, 0, 0.8236415, -0.56711084, 0, 0.56711084, 0.8236415, 0, 1.6954167, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=803433517]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
@@ -58,13 +64,18 @@ dict = Dictionary[String, ExtResource("5_fhl08")]({
 health_component = NodePath("../HealthComponent")
 
 [node name="StateMachine" parent="." unique_id=1777195957 node_paths=PackedStringArray("initial_state", "actor") instance=ExtResource("7_od3ui")]
-initial_state = NodePath("Idle")
+initial_state = NodePath("Ground")
 actor = NodePath("..")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1320958072]
-script = ExtResource("8_00tjw")
-metadata/_custom_type_script = "uid://cprstmdj8bci"
+[node name="Ground" type="Node" parent="StateMachine" unique_id=553559493]
+script = ExtResource("8_od3ui")
+metadata/_custom_type_script = "uid://ck48kv85c2n0r"
 
-[node name="Move" type="Node" parent="StateMachine" unique_id=2144111328]
+[node name="Air" type="Node" parent="StateMachine" unique_id=2127925180]
 script = ExtResource("9_00tjw")
-metadata/_custom_type_script = "uid://2p2yfi6mstw0"
+metadata/_custom_type_script = "uid://cs8143daom50r"
+
+[node name="Mace" parent="." unique_id=620362954 node_paths=PackedStringArray("state_machine") instance=ExtResource("10_apopc")]
+weapon = SubResource("Resource_5htga")
+state_machine = NodePath("../StateMachine")
+is_primary = true
